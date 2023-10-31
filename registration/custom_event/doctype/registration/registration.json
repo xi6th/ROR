@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-28 16:10:04.435017",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "middel_name",
+  "kingschat_phone_number",
+  "country_of_residency",
+  "zone",
+  "amended_from",
+  "souvenir_pick_up"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "middel_name",
+   "fieldtype": "Data",
+   "label": "Middel Name"
+  },
+  {
+   "fieldname": "kingschat_phone_number",
+   "fieldtype": "Phone",
+   "label": "KingsChat Phone Number"
+  },
+  {
+   "fieldname": "country_of_residency",
+   "fieldtype": "Link",
+   "label": "Country of Residency",
+   "options": "Country"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Data",
+   "label": "Zone"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Registration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "souvenir_pick_up",
+   "fieldtype": "Select",
+   "label": "Souvenir Pick Up ",
+   "options": "In Person\nRepresentative"
+  },
+  {
+    "fieldname": "representative",
+    "fieldtype": "Check",
+    "label": "Representative"
+   },
+  {
+    "depends_on": "representative",
+    "fieldname": "representative_first_name",
+    "fieldtype": "Data",
+    "label": "Representative First Name"
+   },
+   {
+    "depends_on": "representative",
+    "fieldname": "representative_last_name",
+    "fieldtype": "Data",
+    "label": "Representative Last Name"
+   }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-28 17:33:03.714523",
+ "modified_by": "Administrator",
+ "module": "Custom Event",
+ "name": "Registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Attendee",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "route": "registration",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
